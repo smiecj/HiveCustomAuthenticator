@@ -30,7 +30,7 @@ make build
     </property>
 ```
 
-## hue's configuration
+## hue's configuration and source code modification
 ### hue.ini
 ```
 [beeswax]
@@ -50,6 +50,9 @@ make build
       use_sasl = hive_mechanism in ('KERBEROS', 'NONE', 'LDAP', 'PAM', 'CUSTOM')
       ......
 ```
+
+## md5 encryption
+echo -n password_str | md5sum
 
 ## refer
 [blog-自定义HiveServer2的用户安全认证](http://lxw1234.com/archives/2016/01/600.htm)
