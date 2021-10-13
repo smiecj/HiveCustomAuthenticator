@@ -20,7 +20,7 @@ public class CustomSimpleAuthenticator implements PasswdAuthenticationProvider {
 
     @Override
     public void Authenticate(String user, String password) throws AuthenticationException {
-        log.info("[Authenticate] current user: " + user + ", password: " + password);
+        log.debug("[Authenticate] current user: " + user + ", password: " + password);
         String currentPwd = userPwdMap.get(user);
         if ("" != currentPwd && password.equals(currentPwd)) {
             return;

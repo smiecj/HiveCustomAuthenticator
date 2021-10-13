@@ -1,5 +1,8 @@
 # Custom hive authenticator
 ## build jar
+```
+make build
+```
 
 ## hiveserver2's configuration
 ### hive-site.xml
@@ -11,7 +14,14 @@
 
     <property>
       <name>hive.server2.custom.authentication.class</name>
-      <value>com.smiecj.hive.CustomSimpleAuthenticator</value>
+      <value>com.smiecj.hive.CustomSimpleAuthenticator/com.smiecj.hive.CustomMD5Authenticator</value>
+    </property>
+
+    <!-- CustomMD5Authenticator: username:password(md5) -->
+    
+    <property>
+      <name>hive.server2.custom.authentication.file</name>
+      <value>/user_pwd_file_path</value>
     </property>
 
     <property>
